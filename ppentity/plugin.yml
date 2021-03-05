@@ -1,0 +1,6 @@
+name : ppentity
+version: 1.0
+main: ppentity.Main
+api-version: 1.16
+commands:
+   ppentity:

@@ -1,0 +1,96 @@
+package dobak;
+
+import java.util.Random;
+
+import org.bukkit.Bukkit;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
+import org.bukkit.plugin.java.JavaPlugin;
+
+public class Main extends JavaPlugin{
+	Player[] players;
+	int[] numbers = new int[6];
+	boolean started = false;
+	boolean rolled = true;
+	int turn = 0;
+	
+	@Override
+	public void onEnable() {
+		// TODO Auto-generated method stub
+		super.onEnable();
+	}
+	
+	@Override
+	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+		if(command.getName().equalsIgnoreCase("dobak")) {
+			switch (args[0]) {
+				case "roll": {
+					if(sender.equals(players[turn])) {
+						if(started && !rolled) {
+							numbers = new int[6];
+							for(int i = 0; i < 5; i++) {
+								numbers[i] = new Random().nextInt(5)+1;
+							}
+							for(int i=4; i>0; i--){
+								for(int j=0; j<i; j++){
+									if(numbers[j]>numbers[j+1]){
+						    	  int temp = numbers[j];
+						    	  numbers[j] = numbers[j+1];
+						    	  numbers[j+1] = temp;
+									}
+								}
+							}
+							Bukkit.broadcastMessage(numbers[0]+" "+numbers[1]+" "+numbers[2]+" "+numbers[3]+" "+numbers[4]);
+							rolled = true;
+						}else {
+							if(!started) {
+								sender.sendMessage("게임이 시작되지 않았습니다!");
+							}else {
+								sender.sendMessage("주사위가 이미 굴려졌습니다!");
+							}
+						}
+					}else sender.sendMessage("당신의 턴이 아닙니다!");
+					break;
+				}
+				case "start": {
+					if(!started) {
+						players = new Player[args.length-1];
+						for(int i = 1; i < args.length; i++) {
+							players[i-1] = Bukkit.getPlayer(args[i]);
+						}
+						started = true;
+					}else {
+						sender.sendMessage("게임이 이미 시작되었습니다!");
+					}
+				break;
+				}
+				case "reroll":{
+					if(rolled) {
+						if(sender.equals(players[turn])) {
+							if(args.length == 1) {
+								for(int i = 1; i < args.length; i++) {
+									numbers[i-1] = new Random().nextInt(5)+1;
+								}
+							}else {
+								for(int i = 1; i < args.length; i++) {
+									numbers[Integer.parseInt(args[i])] = new Random().nextInt(5)+1;
+								}
+							}
+						}else {
+							sender.sendMessage("당신의 턴이 아닙니다!");
+						}
+					}else {
+						sender.sendMessage("주사위가 굴려지지 않았습니다!");
+					}
+					break;
+				}
+			}
+		}
+		return true;
+	}
+	
+	public void calc() {
+		
+	}
+}

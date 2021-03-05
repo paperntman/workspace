@@ -1,0 +1,18 @@
+package commandchange;
+
+import org.bukkit.Bukkit;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.inventory.InventoryCloseEvent;
+import org.bukkit.plugin.java.JavaPlugin;
+
+public class Main extends JavaPlugin implements Listener{
+	@Override
+	public void onEnable() {
+		Bukkit.getPluginManager().registerEvents(this, this);
+	}
+	@EventHandler
+	public void onGuiLeft(InventoryCloseEvent e){
+		e.getPlayer().sendMessage("tset");
+	}
+}

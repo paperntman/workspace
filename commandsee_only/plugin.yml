@@ -1,0 +1,7 @@
+name : commandsee
+version: 1.0
+main: commandsee.Main
+api-version: 1.16
+
+commands:
+   commandsee:

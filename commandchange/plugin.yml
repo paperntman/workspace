@@ -1,0 +1,7 @@
+name : commandchange
+version: 1.0
+main: commandchange.Main
+api-version: 1.16
+
+commands:
+  read:

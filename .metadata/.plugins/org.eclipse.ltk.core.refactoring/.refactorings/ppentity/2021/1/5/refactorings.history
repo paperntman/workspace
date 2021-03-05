@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 3 elements to &apos;commandsee_v5_1/src/ppentity&apos;&#x0D;&#x0A;- Original project: &apos;ppentity&apos;&#x0D;&#x0A;- Destination element: &apos;commandsee_v5_1/src/ppentity&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     ppentity.Ppentity.java&#x0D;&#x0A;     ppentity.Main.java&#x0D;&#x0A;     ppentity.PpentityTabCompleter.java&#x0D;&#x0A;- Update references to refactored element" description="Move compilation units" destination="=commandsee_v5_1/src&lt;ppentity" element1="/src&lt;ppentity{Ppentity.java" element2="/src&lt;ppentity{Main.java" element3="/src&lt;ppentity{PpentityTabCompleter.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1611895859555" units="3" version="1.0"/>
+</session>

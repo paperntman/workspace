@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;CommandSee.java&apos; to &apos;commandsee_only/src/commandsee&apos;&#x0D;&#x0A;- Original project: &apos;commandsee_only&apos;&#x0D;&#x0A;- Destination element: &apos;commandsee_only/src/commandsee&apos;&#x0D;&#x0A;- Original element: &apos;CommandSee.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src&lt;commandsee" element1="/src&lt;{CommandSee.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1612143081123" units="1" version="1.0"/>
+</session>

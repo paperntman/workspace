@@ -1,0 +1,14 @@
+name: PaperCommandSee
+version: 2.0
+api-version: 1.16
+main: commandsee.Main
+commands:
+   commandsee:
+      description: "-w <World> = 특정 월드에서 일어나는 커맨드 탐색\n-c <문자열> 특정 문자열을 포함하는 커맨드 탐색\n-b <impulse/chain/repeat> 임펄스/체인/반복 커맨드블럭에서 일어나는 커맨드블럭 탐색\n커맨드는 /commandsee -w world -c execute -c run -b impulse와 같이 한번에 여러 개를 사용 할 수 있습니다."
+      usage: "/commandsee -w/-b/-c"
+   commandhide:
+      description: "commandhide add <좌표> <월드> = 특정 좌표에 있는 커맨드블럭을 /commandsee 명령어로 보지 못하게 합니다.\ncommandhide list = /commandsee 명령어로 볼 수 없는 커맨드블럭들의 목록입니다.\ncommandhide remove all = /commandsee 명령어로 볼 수 없는 커맨드블럭들의 목록을 초기화합니다.\ncommandhide remove <좌표> <월드> = /commandsee 명령어로 볼 수 없는 특정 커맨드블럭을 다시 /commandsee 명령어로 볼 수 있게 합니다."     
+      usage: "/commandhide [<add> / <remove> / <list>]" 
+   commandplacer:
+      description: "commandplacer <좌표> <월드> = 특정 좌표에 있는 커맨드블럭의 설치자를 찾습니다."
+      usage: "/commandplacer <좌표> <월드>"
