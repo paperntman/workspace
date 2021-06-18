@@ -1,0 +1,8 @@
+name : tools
+version: 1.0
+main: economy.Main
+api-version: 1.16
+commands:
+  money:
+  baltop:
+  reload:

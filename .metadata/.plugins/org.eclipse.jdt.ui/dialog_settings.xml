@@ -2,7 +2,7 @@
 <section name="Workbench">
 	<item key="org.eclipse.jdt.ui.last.selected.jre.kind2" value="2"/>
 	<item key="org.eclipse.jdt.ui.last.selected.execution.enviroment" value="JavaSE-11"/>
-	<item key="org.eclipse.jdt.ui.lastextjar" value="E:\plugin"/>
+	<item key="org.eclipse.jdt.ui.lastextjar" value="C:\Users\kms\Desktop\서버\plugin"/>
 	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
 		<item key="group_libraries" value="true"/>
 		<item key="layout" value="2"/>
@@ -46,6 +46,7 @@
 		<item key="JarManifestWizardPage.MANIFEST_LOCATION" value=""/>
 		<item key="JarManifestWizardPage.SEAL_JAR" value="false"/>
 		<list key="JarPackageWizardPage.DESTINATION_NAMES_ID">
+			<item value="C:\Users\kms\Desktop\서버\plugin\plugins\armor.jar"/>
 			<item value="C:\Users\kms\Desktop\server\run.jar"/>
 			<item value="D:\plugin\plugins\commandsee_only.jar"/>
 			<item value="D:\plugin\plugins\commandsee.jar"/>
