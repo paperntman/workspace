@@ -7,17 +7,12 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Map;
 
+import executor.*;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.yaml.snakeyaml.Yaml;
 
 import completer.CalenderTabCompleter;
-import completer.NameTabCompleter;
-import executor.CalenderExecutor;
-import executor.Fly;
-import executor.NameExecutor;
-import executor.QkqExecutor;
-import executor.Sun;
 
 public class Main extends JavaPlugin{
 	
@@ -35,7 +30,8 @@ public class Main extends JavaPlugin{
 		getCommand("sun").setExecutor(new Sun());
 		getCommand("fly").setExecutor(new Fly());
 		getCommand("name").setExecutor(new NameExecutor());
-		getCommand("name").setTabCompleter(new NameTabCompleter());
+		getCommand("back").setExecutor(new BackExecutor());
+
 		new TabList().runTaskTimer(this, 0, 20);
 		configfile = new File(getDataFolder.getPath()+File.separator+"config.yml");
 		try {
