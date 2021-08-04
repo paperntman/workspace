@@ -1,40 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value=""/>
+		<item key="selection" value="&lt;version&gt;"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value=" "/>
-			<item value="arr"/>
-			<item value="\r"/>
-			<item value="a"/>
-			<item value="for"/>
-			<item value="list"/>
-			<item value="send"/>
-			<item value="p.getLocation()"/>
-			<item value="()"/>
-			<item value="setExecutor"/>
-			<item value="b"/>
-			<item value="sar"/>
-			<item value=".floor"/>
+			<item value="&lt;version&gt;"/>
+			<item value="&lt;target&gt;"/>
+			<item value="&lt;source&gt;"/>
+			<item value="source"/>
+			<item value="plugin"/>
+			<item value="pluign"/>
+			<item value="added"/>
+			<item value="prefix"/>
+			<item value="&apos; &apos;"/>
+			<item value="System.out.print("/>
+			<item value="2"/>
+			<item value="5"/>
+			<item value="numy[j]"/>
+			<item value="numx[i]"/>
+			<item value="[i][j]"/>
 		</list>
 		<list key="replacehistory">
 			<item value=""/>
+			<item value="Main.prefix"/>
+			<item value="bb"/>
+			<item value="output += "/>
+			<item value="nonox"/>
+			<item value="nonoy"/>
+			<item value="numy[i]"/>
+			<item value="numy[j]"/>
+			<item value="[j][i]"/>
+			<item value="static String"/>
 			<item value="list"/>
 			<item value="numbers"/>
 			<item value="CommandHide.hides"/>
 			<item value="loca"/>
 			<item value="TabCompleter()"/>
-			<item value="setTabCompleter"/>
-			<item value="setTabCompletor"/>
-			<item value="args[]"/>
-			<item value="args"/>
-			<item value=".round"/>
-			<item value=".rount"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

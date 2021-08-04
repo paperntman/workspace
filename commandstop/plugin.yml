@@ -1,7 +1,0 @@
-name : commandstop
-version: 1.0
-main: commandstop.Main
-api-version: 1.16
-commands:
-   commandstop:
-   

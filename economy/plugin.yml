@@ -1,8 +1,11 @@
-name : tools
-version: 1.0
-main: economy.Main
-api-version: 1.16
+name : calender
+version : 1.0
+main: 캘린더.Main
+api-version: 1.17
+softdepend: [Vault]
 commands:
-  money:
-  baltop:
-  reload:
+  calender:
+  qkq:
+  sun:
+  fly:
+  name:

@@ -1,6 +1,0 @@
-main: vault.Main
-version: 1.0
-name : ppeconomy
-api-version: 1.16
-commands:
-  money:
