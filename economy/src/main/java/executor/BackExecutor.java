@@ -6,6 +6,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.event.player.PlayerTeleportEvent;
 import 캘린더.Loc;
 
 import java.util.ArrayList;
@@ -22,7 +23,7 @@ public class BackExecutor implements CommandExecutor {
         Location l = backl.get();
         if(sender.hasPermission("tools.command.back")){
             Player p = (Player) sender;
-            p.teleport(l);
+            p.teleport(l, PlayerTeleportEvent.TeleportCause.PLUGIN);
         }
         return false;
     }

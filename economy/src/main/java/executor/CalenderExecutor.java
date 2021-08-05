@@ -20,7 +20,9 @@ public class CalenderExecutor implements CommandExecutor {
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 		if(args.length == 0) {
-			sender.sendMessage("사용법 : calender get/set\n어떻게 args를 아무것도 붙이지 않는 후닝같은 짓을 할 수가 있죠? 정말 한심하네요.");
+			Long now = Bukkit.getWorld("world").getGameTime();
+			now -= origin;
+			sender.sendMessage(getNow(now));
 			return true;
 		}
 		switch (args[0]) {
@@ -133,14 +135,12 @@ public class CalenderExecutor implements CommandExecutor {
                             if(day > 29){
                                 day -= 29;
                                 month++;
-                                continue;
                             }else break;
                         }
                     }else{
                         if(day > 29){
                             day -= 29;
                             month++;
-                            continue;
                         }else break;
                     }
                 }else if(day > 28){
@@ -159,7 +159,9 @@ public class CalenderExecutor implements CommandExecutor {
 	}
 	
 	public long getTime(String[] code, boolean calc) {
-		boolean ac = code[0].equalsIgnoreCase("AC") ? true : false;
+		boolean ac;
+		if (code[0].equalsIgnoreCase("AC")) ac = true;
+		else ac = false;
 		long year = Integer.valueOf(code[1]);
 		long month = Integer.valueOf(code[2]);
 		long day = Integer.valueOf(code[3]);

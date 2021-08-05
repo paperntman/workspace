@@ -11,9 +11,7 @@ public class NameExecutor implements CommandExecutor {
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 		if(sender.hasPermission("tools.command.name")) {
-			Player p = Bukkit.getPlayer(args[0]);
-			String name = args[1];
-			p.setDisplayName(name);
+			((Player) sender).setDisplayName(args[0]);
 		}
 		return true;
 	}

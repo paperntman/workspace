@@ -15,16 +15,17 @@ public class Teleport implements Listener {
     public static ArrayList<Loc> locations;
 
     static {
-        locations = new ArrayList<Loc>();
+        locations = new ArrayList<>();
     }
 
     @EventHandler
     public void onTeleport(PlayerTeleportEvent e){
-        locations.forEach(l -> {
-            if(l.getPlayer().equals(e.getPlayer())){
+        if(e.getCause().equals(PlayerTeleportEvent.TeleportCause.PLUGIN)) return;
+        for (Loc l : locations) {
+            if (l.getPlayer().equals(e.getPlayer())) {
                 l.setLocation(e.getPlayer().getLocation());
             }
-        });
+        }
     }
 
     @EventHandler
