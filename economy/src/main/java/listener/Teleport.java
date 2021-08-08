@@ -20,7 +20,7 @@ public class Teleport implements Listener {
 
     @EventHandler
     public void onTeleport(PlayerTeleportEvent e){
-        if(e.getCause().equals(PlayerTeleportEvent.TeleportCause.PLUGIN)) return;
+        if(!e.getCause().equals(PlayerTeleportEvent.TeleportCause.PLUGIN))
         for (Loc l : locations) {
             if (l.getPlayer().equals(e.getPlayer())) {
                 l.setLocation(e.getPlayer().getLocation());
