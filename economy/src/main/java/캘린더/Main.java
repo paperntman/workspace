@@ -11,6 +11,7 @@ import executor.*;
 import listener.Teleport;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.yaml.snakeyaml.Yaml;
 
@@ -33,7 +34,9 @@ public class Main extends JavaPlugin{
 		getCommand("fly").setExecutor(new Fly());
 		getCommand("name").setExecutor(new NameExecutor());
 		getCommand("back").setExecutor(new BackExecutor());
+		getCommand("prefix").setExecutor(new PrefixExecutor());
 		Bukkit.getPluginManager().registerEvents(new Teleport(), this);
+		Bukkit.getPluginManager().registerEvents(new PrefixExecutor(), this);
 		configfile = new File(getDataFolder.getPath()+File.separator+"config.yml");
 		try {
 			if(!configfile.exists() || new FileReader(configfile).read() == -1) {

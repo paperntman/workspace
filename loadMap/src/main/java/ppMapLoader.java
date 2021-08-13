@@ -25,7 +25,6 @@ public class ppMapLoader implements CommandExecutor {
             }
 
             MapCanvas m = (MapCanvas) Bukkit.getWorld("test").getEntities().get(0);
-            m.
         }
         return true;
     }
