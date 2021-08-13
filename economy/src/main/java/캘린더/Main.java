@@ -18,12 +18,12 @@ import org.yaml.snakeyaml.Yaml;
 import completer.CalenderTabCompleter;
 
 public class Main extends JavaPlugin{
-	
+
 	public static File getDataFolder;
     public static String servername;
     public static String prefix = ChatColor.DARK_GRAY+"["+ChatColor.DARK_RED+"tools"+ChatColor.DARK_GRAY+"] ";
     File configfile;
-	
+
 	@Override
 	public void onEnable() {
 	    getDataFolder = getDataFolder();
@@ -54,16 +54,16 @@ public class Main extends JavaPlugin{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 		load();
     }
-    
+
     public void load() {
-    	try { 
+    	try {
     		Map<String, Object> propMap = new Yaml().load(new FileReader(configfile));
-    		servername = (String) propMap.get("server-name"); 
-    	} catch (FileNotFoundException e) { 
-    		e.printStackTrace(); 
+    		servername = (String) propMap.get("server-name");
+    	} catch (FileNotFoundException e) {
+    		e.printStackTrace();
     	}
     }
 }
